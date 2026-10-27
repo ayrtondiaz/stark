@@ -134,6 +134,24 @@ header.scrolled{border-color:var(--line)}
 .case li::before{content:"";flex:0 0 8px;height:8px;margin-top:9px;border-radius:50%;background:var(--grad)}
 .case h3{font-size:clamp(28px,3.4vw,40px);font-weight:700}
 
+/* about */
+.founder{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:center;padding:clamp(24px,4vw,44px);border-radius:24px;background:radial-gradient(500px 260px at 0% 0%,rgba(4,255,186,.1),transparent 70%),var(--bg2);border:1px solid var(--line);margin-bottom:16px}
+.founder-photo{position:relative;aspect-ratio:1;max-width:380px;width:100%;margin-inline:auto}
+.founder-photo::before{content:"";position:absolute;inset:-6px;border-radius:28px;background:var(--grad);opacity:.85}
+.founder-photo img{position:relative;width:100%;height:100%;object-fit:cover;border-radius:24px;border:4px solid var(--bg2)}
+.founder h3{font-size:clamp(30px,3.6vw,44px);font-weight:700}
+.founder .role{color:var(--teal);margin:8px 0 18px;font-size:15px}
+.founder p{color:var(--muted)}
+.skills{list-style:none;padding:0;margin:22px 0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.skills li{padding:14px 16px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-size:14px;color:var(--muted)}
+.skills b{display:block;font-family:"League Spartan",sans-serif;font-weight:600;font-size:17px;color:var(--text);margin-bottom:2px}
+.founder-meta{display:flex;gap:32px;flex-wrap:wrap}
+.founder-meta b{display:block;font:600 26px/1.1 "League Spartan",sans-serif;color:var(--mint)}
+.founder-meta small{color:var(--muted);font-size:13px}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:960px){.founder{grid-template-columns:1fr}.founder-photo{max-width:280px}}
+@media (max-width:640px){.skills,.team{grid-template-columns:1fr}}
+
 /* stack */
 .stack{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:36px}
 .stack span{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:var(--bg2);font-size:14px;color:var(--muted)}
@@ -188,6 +206,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <a href="#servicios">Servicios</a>
       <a href="#ia">IA</a>
       <a href="#proceso">Proceso</a>
+      <a href="#nosotros">Nosotros</a>
       <a href="#casos">Casos</a>
       <a class="btn sm" href="#contacto">Hablemos</a>
     </div>
@@ -316,6 +335,57 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <div class="step reveal" style="--d:.15s"><h3>Diseño</h3><p>Arquitectura, prototipos y experiencia de usuario validados en conjunto.</p></div>
         <div class="step reveal" style="--d:.3s"><h3>Desarrollo</h3><p>Iteraciones cortas, pruebas automatizadas y demos frecuentes.</p></div>
         <div class="step reveal" style="--d:.45s"><h3>Lanzamiento</h3><p>Puesta en producción, capacitación y soporte continuo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Nosotros</span><h2>Un equipo con <span class="grad-text">visión de ingeniería.</span></h2></div>
+        <p class="lead">Somos un equipo multidisciplinario liderado por su fundador. Unimos ingeniería de software, diseño y marketing para construir productos que funcionan y se ven bien.</p>
+      </div>
+
+      <article class="founder reveal">
+        <div class="founder-photo">
+          <img src="assets/founder.webp" alt="Ing. Ayrton Diaz, fundador de Stark Soft &amp; IA" width="460" height="460" loading="lazy">
+        </div>
+        <div>
+          <span class="eyebrow" style="margin-bottom:10px">Fundador · CEO</span>
+          <h3>Ing. Ayrton Diaz</h3>
+          <p class="role">Ingeniero en Informática (UCASAL) · Arquitecto de software y diseñador</p>
+          <p>Fundó Stark en 2024 para llevar a las empresas el mismo nivel de software que usan las grandes compañías, con la inteligencia artificial como parte central del proceso. Combina la mirada técnica de la ingeniería con la sensibilidad del diseño: piensa la arquitectura del sistema y también cómo lo va a vivir cada usuario.</p>
+          <ul class="skills">
+            <li><b>Desarrollo fullstack</b>Next.js, NestJS, PostgreSQL y sistemas en producción.</li>
+            <li><b>Inteligencia artificial</b>Agentes, chatbots y automatizaciones con IA.</li>
+            <li><b>Diseño y branding</b>Identidad de marca, interfaces y experiencia de usuario.</li>
+            <li><b>Datos y análisis</b>Modelos predictivos y series temporales aplicadas a negocio.</li>
+          </ul>
+          <div class="founder-meta">
+            <div><b>20+</b><small>sitios y sistemas entregados</small></div>
+            <div><b>2024</b><small>fundación de Stark</small></div>
+            <div><b>Docente</b><small>de programación en nivel superior</small></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="team">
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M8 6 2 12l6 6M16 6l6 6-6 6M14 4l-4 16"/></svg></div>
+          <h3>Desarrollo</h3>
+          <p>Ingenieros y desarrolladores especializados en backend, frontend, integraciones e inteligencia artificial. Código limpio, probado y listo para escalar.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9h5M7 12h8"/></svg></div>
+          <h3>Diseño UX/UI</h3>
+          <p>Investigación de usuarios, prototipos e interfaces claras. Diseñamos cada pantalla para que tu equipo y tus clientes la usen sin manual.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1ZM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></div>
+          <h3>Marketing</h3>
+          <p>Branding, contenido y campañas digitales para que tu producto no solo funcione: que llegue a las personas correctas y venda.</p>
+        </article>
       </div>
     </div>
   </section>
